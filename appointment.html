@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book an Appointment - Hospital Management System</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <a href="index.html" class="logo"><i class="fas fa-heartbeat"></i>Medlife</a>
+  <div id="menu-bar" class="fas fa-bars"></div>
+  <nav class="navbar">
+    <a href="index.html#home">home</a>
+    <a href="services.html">services</a>
+    <a href="index.html#about">about</a>
+    <a href="index.html#contact">contact</a>
+  </nav>
+</header>
+
+<!-- Book Appointment Section -->
+<section class="book-appointment">
+  <h1 class="heading"><span>Book</span> an Appointment</h1>
+  <form class="appointment-form">
+    <div class="form-group">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+    </div>
+    <div class="form-group">
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required />
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required />
+    </div>
+    <div class="form-group">
+      <label for="department">Select Department:</label>
+      <select id="department" name="department" required>
+        <option value="">-- Select Department --</option>
+        <option value="allergy">Allergy & Immunology</option>
+        <option value="burn-unit">Burn Unit</option>
+        <option value="cardiology">Cardiology</option>
+        <option value="dermatology">Dermatology</option>
+        <option value="endocrinology">Endocrinology</option>
+        <option value="forensic-medicine">Forensic Medicine</option>
+        <option value="gastroenterology">Gastroenterology</option>
+        <option value="hematology">Hematology</option>
+        <option value="neurology">Neurology</option>
+        <option value="oncology">Oncology</option>
+        <option value="pediatrics">Pediatrics</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="date">Preferred Date:</label>
+      <input type="date" id="date" name="date" required />
+    </div>
+    <div class="form-group">
+      <label for="message">Additional Message:</label>
+      <textarea id="message" name="message" rows="4" placeholder="Enter any additional details"></textarea>
+    </div>
+    <button type="submit" class="btn">Submit</button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="social-icons">
+    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+  <div class="footer-text">
+    &copy; 2025 YourWebsite. All rights reserved.
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script>
+  // Init EmailJS
+  emailjs.init("E57wglCI4uzGXqMbw"); // ✅ Replace with your EmailJS Public Key
+
+  // Toggle Navbar for Mobile
+  document.getElementById("menu-bar").addEventListener("click", function () {
+    document.querySelector(".navbar").classList.toggle("active");
+  });
+
+  // EmailJS Form Submission
+  document.querySelector(".appointment-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Basic validation
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    if (!validateEmail(email)) {
+      alert("Please enter a valid email.");
+      return;
+    }
+    if (!validatePhone(phone)) {
+      alert("Please enter a valid 10-digit phone number.");
+      return;
+    }
+
+   emailjs.send("service_s5oowpj","template_tygwkug", {
+    user_name: nameInput.value,
+    user_email: emailInput.value, 
+    otp: generatedOtp
+})
+.then(function(response) {
+   alert("OTP sent successfully!");
+}, function(error) {
+   alert("Failed to send email: " + JSON.stringify(error));
+});
+
+  function validateEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
+  function validatePhone(phone) {
+    const phoneRegex = /^[0-9]{10}$/;
+    return phoneRegex.test(phone);
+  }
+
+  // Scroll to Top Button
+  const scrollToTopBtn = document.createElement("button");
+  scrollToTopBtn.textContent = "↑";
+  scrollToTopBtn.classList.add("scroll-to-top");
+  document.body.appendChild(scrollToTopBtn);
+
+  window.addEventListener("scroll", function () {
+    scrollToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+  });
+
+  scrollToTopBtn.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
+<style>
+  .scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #0a74da;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    font-size: 20px;
+  }
+</style>
+
+</body>
+</html>

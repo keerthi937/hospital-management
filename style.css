@@ -1,0 +1,1074 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Base Styles */
+body {
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+}
+
+section {
+  padding: 60px 20px;
+}
+
+.heading {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.heading span {
+  color: #e91e63;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 15px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: 0.3s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header.header-active {
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+header .logo {
+  font-size: 1.8rem;
+  color: #e91e63;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+header .logo i {
+  color: #333;
+  margin-right: 10px;
+}
+
+.navbar a {/* Hero Section */
+.services-hero {
+  background: linear-gradient(to right, #007bff, #0056b3);
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.services-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.services-hero p {
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+
+/* Medical Services Section */
+.medical-services {
+  padding: 50px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.medical-services .heading {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.medical-services .services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.medical-services .service {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.medical-services .service:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.medical-services .service h2 {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.medical-services .service p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Footer */
+footer {
+  background: #007bff;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+  text-decoration: none;
+  margin: 0 15px;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #e91e63;
+}
+
+#menu-bar {
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Home */
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url('https://images.unsplash.com/photo-1588776814546-ecdbb1e2f7a2?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.home .content {
+  max-width: 600px;
+  margin: auto;
+  background: rgba(0,0,0,0.6);
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.home h3 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.home p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 10px 25px;
+  background: #e91e63;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background 0.3s;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background: #c2185b;
+}
+
+/* Services */
+.services .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.services .box {
+  background: #fff;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.services .box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.services .box i {
+  font-size: 2rem;
+  color: #e91e63;
+  margin-bottom: 15px;
+}
+
+/* About */
+.about .row {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about .content {
+  text-align: center;
+}
+
+.about .content h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Contact */
+.contact form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.contact button {
+  background: #e91e63;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.contact button:hover {
+  background: #c2185b;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #menu-bar {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    background: #fff;
+    flex-direction: column;
+    gap: 15px;
+    display: none;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+  }
+
+  .navbar.nav-toggle {
+    display: flex;
+  }
+}
+/* Home Section Styling */
+.home .content {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Vertically center content */
+  justify-content: space-between; /* Space between text and image */
+  flex-wrap: wrap; /* Ensure responsiveness */
+  gap: 20px; /* Add spacing between elements */
+}
+
+.home .content h3 {
+  font-size: 2.5rem;
+  color: #fff; /* White text for contrast */
+  margin: 0; /* Remove default margin */
+}
+
+.home .content p {
+  font-size: 1.2rem;
+  color: #fff; /* White text for contrast */  
+  margin: 10px 0;
+}
+
+.home .content .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: white;;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.home .content .btn:hover {
+  background: white;;
+}
+
+/* Image Styling */
+.home .home-image {
+  max-width: 40%; /* Limit image width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 15px; /* Rounded corners */
+   /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.home .home-image:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+/* Services Detail Section */
+.services-detail {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.services-detail .heading {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.services-detail .service {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-detail .service:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.services-detail .service i {
+  font-size: 3rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.services-detail .service h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.services-detail .service p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+/* Book an Appointment Button */
+.navbar .book-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-left: 15px;
+  transition: background 0.3s ease;
+}
+
+.navbar .book-btn:hover {
+  background: #0056b3;
+}
+/* Why Choose Us Section */
+.why-choose-us {
+  padding: 50px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.why-choose-us .heading {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.why-choose-us .features-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.why-choose-us .feature {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-choose-us .feature:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.why-choose-us .feature i {
+  font-size: 3rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.why-choose-us .feature h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.why-choose-us .feature p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+/* Multi-Supporting Systems Section */
+.multi-support-systems {
+  padding: 50px 20px;
+  background: #f1f1f1;
+  text-align: center;
+}
+
+.multi-support-systems .heading {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.multi-support-systems .systems-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.multi-support-systems .system {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.multi-support-systems .system:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.multi-support-systems .system i {
+  font-size: 3rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.multi-support-systems .system h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.multi-support-systems .system p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+/* Home Section Full-Size Image */
+.home-full-image {
+  width: 100%;
+  height: 100%; /* Increase the height slightly */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0.8; /* Optional: Add transparency to the image */
+  object-fit: cover; /* Ensures the image covers the section without distortion */
+}/* Home Section Content */
+.home .content {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+  padding: 20px 30px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a shadow for better visibility */
+  display: inline-block; /* Ensures the box wraps around the content */
+  color: #fff; /* White text for contrast */
+}
+
+.home .content h3 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.home .content p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.home .content .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.home .content .btn:hover {
+  background: #0056b3;
+}
+
+/* About Section */
+.about {
+  padding: 50px 20px;
+  background: #f9f9f9;
+}
+
+.about .heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.about .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.about .image {
+  flex: 1 1 50%;
+  text-align: center;
+}
+
+.about .image img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about .content {
+  flex: 1 1 50%;
+}
+
+.about .content h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #007bff;
+}
+
+.about .content p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.about .content ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.about .content ul li {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.about .content ul li i {
+  color: #007bff;
+  margin-right: 10px;
+}
+
+.about .content .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.about .content .btn:hover {
+  background: #0056b3;
+}
+
+/* Services Section */
+.services {
+  padding: 50px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.services .heading {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.services .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.services .box {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services .box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.services .box i {
+  font-size: 3rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.services .box h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.services .box p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}.box {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.box h3, .box p {
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+/* Medical Services Section */
+.medical-services {
+  padding: 50px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.medical-services .heading {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.medical-services .services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.medical-services .service {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.medical-services .service:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.medical-services .service h2 {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.medical-services .service p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+/* Book Appointment Button */
+.services-hero .book-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #ff5722;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.services-hero .book-btn:hover {
+  background: #e64a19;
+  transform: scale(1.05);
+}
+/* Medical Services List */
+.services-list {
+  list-style: none; /* Remove default bullets */
+  padding: 0;
+  margin: 0;
+}
+
+.services-list li {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-list li:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.services-list h2 {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.services-list p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.services-list .book-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.services-list .book-btn:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+/* Book Appointment Section */
+.book-appointment {
+  padding: 50px 20px;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.book-appointment .heading {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.appointment-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-form .form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.appointment-form label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.appointment-form input,
+.appointment-form select,
+.appointment-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.appointment-form button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.appointment-form button:hover {
+  background: #0056b3;
+}/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: #007bff;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* Medical Services Section */
+.medical-services {
+  padding: 50px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.medical-services .heading {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.service {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.service h2 {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.service p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.service .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.service .btn:hover {
+  background: #0056b3;
+}/* Medical Services Section */
+.medical-services {
+  padding: 50px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.medical-services .heading {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.service {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.service h2 {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.service p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.service .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.service .btn:hover {
+  background: #0056b3;
+}
+.contact-container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Footer Section */
+footer {
+  background: #007bff;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+footer .social-icons {
+  margin-bottom: 10px;
+}
+
+footer .social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .social-icons a:hover {
+  color: #ffcc00;
+  transform: scale(1.2);
+}
+
+footer .footer-text {
+  font-size: 1rem;
+  margin-top: 10px;
+}
